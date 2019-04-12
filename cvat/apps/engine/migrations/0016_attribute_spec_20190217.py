@@ -1,11 +1,7 @@
 import re
 import csv
 from io import StringIO
-from django.conf import settings
-from django.db import migrations, models
-import django.db.migrations.operations.special
-import django.db.models.deletion
-import cvat.apps.engine.models
+from django.db import migrations
 
 def parse_attribute(value):
     match = re.match(r'^([~@])(\w+)=(\w+):(.+)?$', value)
